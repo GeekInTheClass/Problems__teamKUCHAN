@@ -13,13 +13,31 @@ import Foundation
 
 // for문을 이용하여 구구단중 9단을 출력하세요.
 
-var i = 9
-for j in 1...9{
-    print("\(i)*\(j)=\(i*j)")
+print("=============1번================")
+let arr = [1,2,3,4,5,6,7,8,9]
+let mapped = arr.map { (item) -> Int in
+    return item*9
 }
 
+print(mapped)
 
-//거미는 8개의 다리가 있고, 사람은 2개의 다리가 있고, 호랑이는 4개의 다리가 있습니다. 이를 출력하는 코드를 dictionary와 for문을 이용하여 작성하세요.
+
+print("==============2번==================")
+var problemArray = Array<String>(["banana","apple","javascript","swift","repository","sum"])
+
+let ary = problemArray.filter { (item : String) -> Bool in
+    return item.count > 5
+}
+
+let fin = ary.reduce("") { (result, item) -> String in
+    return result+item
+}
+
+print(fin)
+
+
+
+/*거미는 8개의 다리가 있고, 사람은 2개의 다리가 있고, 호랑이는 4개의 다리가 있습니다. 이를 출력하는 코드를 dictionary와 for문을 이용하여 작성하세요.
 
 let numberOfLegs = ["spider": 8, "person": 2, "tiger": 4]
 for (animalName, legCount) in numberOfLegs {
@@ -72,3 +90,4 @@ for person in people {
         belowFive[person.key] = person.value
     }
 }
+*/
